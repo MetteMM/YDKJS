@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Exercise for YDKJS Book 1, Chapter 1</p>
+    <script>
+      //defining constants
+      const PHONE_PRICE = 99.99;
+      const ACCESSORY_PRICE = 9.99;
+      const TAX_RATE = 0.08;
+      //defining variables
+      var spending_threshold = prompt("How much do you want to spend? ");
+      var bank_account = prompt("How much is in your bank account? ");
+      //calculating amount
+      var amount = PHONE_PRICE + ACCESSORY_PRICE;
+      amount = amount + (amount * TAX_RATE);
+      /*creating loop to purchase phones, as long as the amount is less than
+      spending threshold or amount in bank account*/
+      if (amount < spending_threshold && amount < bank_account) {
+        console.log("$" + amount.toFixed(2));
+        bank_account = bank_account - amount;
+      } else {
+        console.log("No phones purchased!");
+      }
+
+
+    </script>
+  </body>
+</html>
